@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 
 const startServer = () => {
   app.use(express.json());
-  app.use(cors());
+  app.use(cors({ credentials: true, origin: true }));
 
   initialiseRoute(app);
 
